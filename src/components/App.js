@@ -158,8 +158,8 @@ const states = [
 function App() {
   const stateList = states.map((state, i) => {
     return (
-      <li id={`state${i + 1}`} key={state.name}>
-        <State state={state} />
+      <li key={state.name}>
+        <State id={`state${i + 1}`} state={state} />
       </li>
     );
   });

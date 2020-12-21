@@ -10,8 +10,8 @@ const State = ({ state }) => {
 
   const cityList = state.cities.map((city, i) => {
     return (
-      <li key={i} id={`city${i + 1}`}>
-        <City city={city} />
+      <li key={i}>
+        <City id={`city${i + 1}`} city={city} />
       </li>
     );
   });
