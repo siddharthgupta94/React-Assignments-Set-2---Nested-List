@@ -157,9 +157,17 @@ const states = [
 
 function App() {
   const stateList = states.map((state, i) => {
-    return <State id={`state${i + 1}`} key={state.name} state={state} />;
+    return (
+      <li key={state.name}>
+        <State id={`state${i + 1}`} state={state} />
+      </li>
+    );
   });
-  return <div id="main">{stateList}</div>;
+  return (
+    <div id="main">
+      <ul>{stateList}</ul>
+    </div>
+  );
 }
 
 export default App;

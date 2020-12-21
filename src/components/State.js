@@ -9,13 +9,17 @@ const State = ({ state }) => {
   };
 
   const cityList = state.cities.map((city, i) => {
-    return <City key={i} id={`city${i + 1}`} city={city} />;
+    return (
+      <li key={i}>
+        <City id={`city${i + 1}`} city={city} />
+      </li>
+    );
   });
 
   return (
     <div>
       <h1 onClick={toggleCity}>{state.name}</h1>
-      {showCities && cityList}
+      {showCities && <ul>{cityList}</ul>}
     </div>
   );
 };
