@@ -10,8 +10,8 @@ export const City = ({ city }) => {
 
   const townList = city.towns.map((town, i) => {
     return (
-      <li key={i}>
-        <Town id={`town${i + 1}`} town={town} />
+      <li key={i} id={`town${i + 1}`}>
+        <Town town={town} />
       </li>
     );
   });
