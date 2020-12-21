@@ -17,9 +17,9 @@ export const City = ({ city }) => {
   });
 
   return (
-    <div>
+    <>
       <h2 onClick={toggleTowns}>{city.name}</h2>
       {showTowns && <ul>{townList}</ul>}
-    </div>
+    </>
   );
 };

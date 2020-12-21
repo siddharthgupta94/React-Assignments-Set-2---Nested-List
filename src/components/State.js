@@ -17,10 +17,10 @@ const State = ({ state }) => {
   });
 
   return (
-    <div>
+    <>
       <h1 onClick={toggleCity}>{state.name}</h1>
       {showCities && <ul>{cityList}</ul>}
-    </div>
+    </>
   );
 };
 
